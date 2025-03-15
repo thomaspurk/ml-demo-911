@@ -6,13 +6,13 @@ This project demonstrates the workflows and technologies common to many machine 
 
 Local officials in Montgomery County, PA have approved funds to purchase additional vehicals and hire additional staff to be placed at existing facilities. It is assumed that a new fire truck, police cruiser, and ambulance (one of each) will be purchased for each participating township. A regional planning commission (RPC) has been tasked with providing a data-driven report containing information that can help the county, township, and municiple officials decide how to distribute the vehicles among the members and for which work shifts to hire new staff. 
 
-***Montgomery County Map***
+**Montgomery County Map**
 
 Source: [https://mcato.us/member-directory/montgomery-county-map/](https://mcato.us/member-directory/montgomery-county-map/)
 
 ![https://mcato.us/wp-content/uploads/2023/07/montgomerymap.png](https://mcato.us/wp-content/uploads/2023/07/montgomerymap.png)
 
-### PA County Map
+**PA County Map**
 Source: [https://www.pa.gov/agencies/penndot/maps/county-type-10.html](https://www.pa.gov/agencies/penndot/maps/county-type-10.html)
 
 ![https://s7d9.scene7.com/is/image/statepa/pa-multicolor](https://s7d9.scene7.com/is/image/statepa/pa-multicolor)
