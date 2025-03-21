@@ -51,7 +51,7 @@ The RPC has decided to include the following ML predictions in their analysis re
 
 ## 3. Data Preprocessing and Cleaning
 
-1. Notebook - **Feature Engineering - twp - 1**
+1. Notebook - **[Feature Engineering - twp - 1](https://github.com/thomaspurk/ml-demo-911/blob/main/data-engineering/feature-engineering-twp-1.ipynb)**
     - Removed records with null values
     - Removed records covering calls in adjacent counties
     - Normalized 'twp' so every name had either 'TOWNSHIP' or 'BOROUGH'
@@ -60,12 +60,12 @@ The RPC has decided to include the following ML predictions in their analysis re
     - Decision was to normalize twp values and add a twp_type column.
 <br><br>
 
-2. Notebook - **Feature Engineering - lat/lng - 1**
+2. Notebook - **[Feature Engineering - lat/lng - 1](https://github.com/thomaspurk/ml-demo-911/blob/main/data-engineering/feature-engineering-lat-lng-1.ipynb)**
     - Data had low null rates, but analysis show large number of records using default lat,lng values that were not associated with the actual position
     - Decision was to remove the lat/lng columns since the data quality issues make it difficult to use these columns for imputation of other missing features, and they are not good candidate for direct feed into a ML model.
 <br><br>
 
-3. Notebook - **Feature Engineering - desc - 1**
+3. Notebook - **[Feature Engineering - desc - 1](https://github.com/thomaspurk/ml-demo-911/blob/main/data-engineering/feature-engineering-desc-1.ipynb)**
     - The desc column has no nulls and is highly unique
     - Values seem to contain multiple features delimited by ";"
     - But investigation revealed that ";" is not a reliable delimiter
@@ -74,7 +74,7 @@ The RPC has decided to include the following ML predictions in their analysis re
     - Given the high presentange of nulls, and uncertainty in how a station feature would improve model analysis over other features, like addr. The decision was to delete both the desc and station features.
 <br><br>
 
-4. Notebook - **Feature Engineering - addr - 1**
+4. Notebook - **[Feature Engineering - addr - 1](https://github.com/thomaspurk/ml-demo-911/blob/main/data-engineering/feature-engineering-addr-1.ipynb)**
     - No nulls
     - 38,860 unique
     - The unique counts are possibily exaggerated due to reversed streets, Main St.& Elm St. vs Elm St. & Main St.
@@ -84,7 +84,7 @@ The RPC has decided to include the following ML predictions in their analysis re
     - Given the high number of unique value, and the low number of records covered by address that repeat 10 or more times, the decision is to create a road_type feature based on the road type suffix extracted from addr.
 <br><br>
 
-5. Notebook - **Feature Engineering - title - 1**
+5. Notebook - **[Feature Engineering - title - 1](https://github.com/thomaspurk/ml-demo-911/blob/main/data-engineering/feature-engineering-title-1.ipynb)**
     - No nulls
     - 147 unique values
     - There seems to be two features seperated by a ':'
@@ -92,7 +92,7 @@ The RPC has decided to include the following ML predictions in their analysis re
     - Decision is to split into two new feature 'service_type' (EMS, FIRE, TRAFFIC) and 'service_desc' (88 unique values)
 <br><br>
 
-6. Notebook - **Feature Engineering - timeStamp - 1**
+6. Notebook - **[Feature Engineering - timeStamp - 1](https://github.com/thomaspurk/ml-demo-911/blob/main/data-engineering/feature-engineering-timestamp-1.ipynb)**
     - No nulls
     - high degree of uniqueness
     - Assumption, season of the year, for which month is a proxy could impact the type and frequency of 911 calls
@@ -102,7 +102,7 @@ The RPC has decided to include the following ML predictions in their analysis re
     - Dropped the timeStamp column
 <br><br>
 
-7. Notebook - **Feature Engineering - zip -1**
+7. Notebook - **[Feature Engineering - zip -1](https://github.com/thomaspurk/ml-demo-911/blob/main/data-engineering/feature-engineering-zip-1.ipynb)**
     - 12% null values
     - 164 unique values
     - twp is also a geographic identifier like zip code, but twp is 0% null
