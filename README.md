@@ -115,15 +115,15 @@ _NOTE: This objective definition has been contrived without the advice of a 911 
 
 ## Exploratory Data Analysis (EDA)
 
-    - All data is categorical
-    - Create a Cramer's V Correlation Matrix to investigate relationship among categories.
-    - Tested groups of features correlation to service_type and service_desc.
-    - The combination of month, day_of_week, night_day, and twp had the strongest correlation.
+- All data is categorical
+- Create a Cramer's V Correlation Matrix to investigate relationship among categories.
+- Tested groups of features correlation to service_type and service_desc.
+- The combination of month, day_of_week, night_day, and twp had the strongest correlation.
 
 **Final Pre-Processing**
 
-    - Removed road_type and twp_type
-    - One-hot encoded month, day_of_week, night_day, and twp
+- Removed road_type and twp_type
+- One-hot encoded month, day_of_week, night_day, and twp
 
 ![alt text](<images/categorical correlation - cramers v.png>)
 
