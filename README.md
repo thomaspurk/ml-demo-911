@@ -115,6 +115,8 @@ _NOTE: This objective definition has been contrived without the advice of a 911 
 
 ## Exploratory Data Analysis (EDA)
 
+Notebook [Exploratory Data Analysis - MCPA 911](eda/exploratory-data-analysis-mcpa-911.ipynb)
+
 - All data is categorical
 - Create a Cramer's V Correlation Matrix to investigate relationship among categories.
 - Tested groups of features correlation to service_type and service_desc.
