@@ -129,6 +129,36 @@ Notebook [Exploratory Data Analysis - MCPA 911](eda/exploratory-data-analysis-mc
 
 ![alt text](<images/categorical correlation - cramers v.png>)
 
+## Model Selection
+
+The action item in this phase is to choose an appropriate ML algorithm (e.g., linear regression, decision trees, neural networks) and create some baseline metrics for comparison to optmization step later on.
+
+- Experimented with SciKit Learn's Random Forest Classifier model
+- Tried to predict class 'EMS','FIRE','TRAFFIC'. 52% accuracy, not great.
+- Random Forrest Classifier did not product very good accuracy, and it's not clear how the model would be useful.
+- A model that could predict the number of events per category assuming category is a combination twp, service_type, service_description, could be used to run simulations of future activity.
+- Experimented with SciKit Learn's Random Forest Regressor model to predict the number of future events per category.
+- The results were both better and more applicable to the question at hand.
+
+Results from Kaggle Notebook
+
+![alt text](images/model-selection-rfr-metrics.png)
+
+**Observations**
+
+- Both the MAE (1.52) and RMSE (2.99) are a small portion of the min/max range (202) - good!
+- Both the MAE (1.52) and RMSE (2.99) are smaller than STD (7.24) - good!
+- Both the MAE (1.52) and RMSE (2.99) are a bit high percentage wise to STD (7.24) - a bit of a concern!
+- RMSE (2.99) is a bit larger than MAE (1.52), and RMSE penalizes indvidual large error due to squaring means there are a few outliers. Possibly due to the large difference in activity in rural vs urban townships. - makes sense!
+
+Conclusion: move foward with the Random Forest Regressor model
+
+## Model Training
+
+- Analyze data distributions, correlations, and patterns.
+- Visualize data (e.g., histograms, scatter plots, heatmaps).
+- Understand relationships and potential biases in the dataset.
+
 #########################################
 GPT notes
 
