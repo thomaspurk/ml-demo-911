@@ -24,24 +24,23 @@ ML projects create the most value when ML engineers and SMEs collaborate togethe
 
 ## Workflow
 
-The following steps TODO
+The following steps represent the tasks completed in this project. While gernerally speaking the tasks are approached in the order listed, there is some cyclical and iterative interaction. For example, insights learned during the EDA step may prompt a revist to the previous step, Data Preproicessing & Cleaning.
 
-1. Objectives Definition (see below)
-2. Data Collection (see below)
-3. Data Preprocessing & Cleaning (see below)
+1. Objectives Definition
+2. Data Collection
+3. Data Preprocessing & Cleaning
 4. Exploratory Data Analysis (EDA)
+5. Model Selection
+6. Model Training, Evaluation, & Optimization
 
 ## 1. Objectives Definition
 
-The RPC has decided to include the following ML predictions in their analysis report.
+The RPC has decided to include ML predictions of future call volumes in their report. Given a region, how many of which types of calls can we expect in the future.
 
-1. Given a call's time and location, what most likely service required
-2. Given a call's service and location, what is the most likely day of week.
-3. Given a call's service, location, and day of week, what is the most likely shift
+**Success Criteria**
 
-### Success Criteria
-
-- The ML models predict the specified class in the training set with 90% confidence and 90% accuracy
+- Constraint: 50 police cruisers, 50 fire trucks, and 50 ambulances have been aquired and await distribution among the county's townships and boroughs.
+- Success: An ML Model suggest where to distribute the vehivles based on predicted call volumes.
 
 _NOTE: This objective definition has been contrived without the advice of a 911 SME._
 
@@ -131,7 +130,13 @@ Notebook [Exploratory Data Analysis - MCPA 911](eda/exploratory-data-analysis-mc
 
 ## Model Selection
 
+Notebook [Model Selection - MCPA 911](model-selection/model-selection-mcpa-911.ipynb)
+
 The action item in this phase is to choose an appropriate ML algorithm (e.g., linear regression, decision trees, neural networks) and create some baseline metrics for comparison to optmization step later on.
+
+Microsoft's selection graphic provides some general pointers.
+
+![alt text](images/ml-cheat-sheet.png)
 
 - Experimented with SciKit Learn's Random Forest Classifier model
 - Tried to predict class 'EMS','FIRE','TRAFFIC'. 52% accuracy, not great.
@@ -153,105 +158,8 @@ Results from Kaggle Notebook
 
 Conclusion: move foward with the Random Forest Regressor model
 
-## Model Training
+## Model Training, Evaluation, & Optimization
 
 - Analyze data distributions, correlations, and patterns.
 - Visualize data (e.g., histograms, scatter plots, heatmaps).
 - Understand relationships and potential biases in the dataset.
-
-#########################################
-GPT notes
-
-Great question! Here’s a **high-level overview** of the general steps involved in a **Machine Learning (ML) project**, from start to finish:
-
----
-
-### 1. **Problem Definition**
-
-- **Understand the business or research problem.**
-- Define the **objective**: What are you trying to predict or classify?
-- Understand the **constraints** and **success criteria** (accuracy, speed, cost, etc.).
-
----
-
-### 2. **Data Collection**
-
-- Gather relevant data from various sources: databases, APIs, web scraping, sensors, etc.
-- Consider the **quality and quantity** of data needed for the problem.
-
----
-
-### 3. **Data Preprocessing & Cleaning**
-
-- Handle **missing data**, **inconsistent formats**, and **outliers**.
-- **Feature engineering**: Create new features, encode categorical variables, normalize/scale features.
-- Split data into **training, validation, and test sets**.
-
----
-
-### 4. **Exploratory Data Analysis (EDA)**
-
-- Analyze data distributions, correlations, and patterns.
-- Visualize data (e.g., histograms, scatter plots, heatmaps).
-- Understand relationships and potential biases in the dataset.
-
----
-
-### 5. **Model Selection**
-
-- Choose appropriate ML algorithms (e.g., linear regression, decision trees, neural networks).
-- Consider baseline models for comparison.
-
----
-
-### 6. **Model Training**
-
-- Train selected models on the **training dataset**.
-- Tune **hyperparameters** using techniques like grid search or random search.
-- Monitor training for **overfitting/underfitting**.
-
----
-
-### 7. **Model Evaluation**
-
-- Test model performance on **validation and test datasets**.
-- Use relevant metrics (e.g., accuracy, precision, recall, F1-score, RMSE).
-- Analyze **confusion matrix**, ROC curves if applicable.
-
----
-
-### 8. **Model Optimization**
-
-- Improve performance via:
-  - **Feature selection/engineering**.
-  - Hyperparameter tuning.
-  - Trying different algorithms or architectures (for deep learning).
-- Address **bias-variance tradeoff**.
-
----
-
-### 9. **Deployment**
-
-- Integrate the model into a production environment (API, web app, embedded system, etc.).
-- Ensure **scalability** and **reliability**.
-- Monitor for **concept drift** and model performance over time.
-
----
-
-### 10. **Monitoring & Maintenance**
-
-- Track performance using real-world data.
-- Set up alerts if performance degrades.
-- Retrain or update the model as needed (continuous learning pipelines).
-
----
-
-### Optional (but important):
-
-- **Documentation & Reporting**: Keep clear records of data sources, modeling decisions, and results.
-- **Explainability**: Use tools like SHAP or LIME to explain model decisions.
-- **Ethics & Fairness**: Ensure no biases or unintended consequences.
-
----
-
-If you want, I can give an **example walkthrough** of these steps with a real-world scenario (like predicting house prices or spam detection). Let me know!
