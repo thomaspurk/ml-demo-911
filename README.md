@@ -137,6 +137,7 @@ The action item in this phase is to choose an appropriate ML algorithm (e.g., li
 Microsoft's selection graphic provides some general pointers.
 
 ![alt text](images/ml-cheat-sheet.png)
+[Link](https://learn.microsoft.com/en-us/azure/machine-learning/algorithm-cheat-sheet?view=azureml-api-1)
 
 - Experimented with SciKit Learn's Random Forest Classifier model
 - Tried to predict class 'EMS','FIRE','TRAFFIC'. 52% accuracy, not great.
@@ -160,6 +161,12 @@ Conclusion: move foward with the Random Forest Regressor model
 
 ## Model Training, Evaluation, & Optimization
 
-- Analyze data distributions, correlations, and patterns.
-- Visualize data (e.g., histograms, scatter plots, heatmaps).
-- Understand relationships and potential biases in the dataset.
+Notebook [Model Training - MCPA 911](model-training/model-train-eval-opt-mcpa-911.ipynb)
+
+- Trained a Random Forrest Regressor model based on the model evaluation step
+- Used SciKit Learn's GridSearchCV to find optimized hyperparameters
+- The Grid Search paramters were artificially limited to allow the process to complete on the Kaggle compute environment.
+
+![alt text](<images/best params.png>)
+
+![alt text](images/optimized-rfr-metrics.png)
