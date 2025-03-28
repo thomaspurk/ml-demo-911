@@ -1,6 +1,6 @@
 # Demonstration ML Project
 
-This project demonstrates the workflows and technologies common to many machine learning (ML) projects. The focus is on stardard ML, as opposed to deep learning which uses neural networks. It is inspired by the popular ["Emergency - 911 Calls"](https://www.kaggle.com/datasets/mchirico/montcoaler) dataset hosted on Kaggle.
+This project demonstrates the workflows and technologies common to many machine learning (ML) projects. The focus is on standard ML, as opposed to deep learning which uses neural networks. It is inspired by the popular ["Emergency - 911 Calls"](https://www.kaggle.com/datasets/mchirico/montcoaler) dataset hosted on Kaggle.
 
 ### Simualted 911 Scenario
 
