@@ -4,7 +4,7 @@ This project demonstrates the workflows and technologies common to many machine 
 
 ### Simualted 911 Scenario
 
-Local officials in Montgomery County, PA have approved funds to purchase additional vehicals and hire additional staff to be placed at existing facilities. It is assumed that a new fire truck, police cruiser, and ambulance (one of each) will be purchased for each participating township. A regional planning commission (RPC) has been tasked with providing a data-driven report containing information that can help the county, township, and municiple officials decide how to distribute the vehicles among the members and for which work shifts to hire new staff.
+Local officials in Montgomery County, PA have approved funds to purchase additional vehicals and hire additional staff to be placed at existing facilities. It is assumed that 150 new fire trucks, 150 new police cruisers, and 150 new ambulances will be purchased for each participating township. A regional planning commission (RPC) has been tasked with providing a data-driven report containing information that can help the county, township, and municiple officials decide how to distribute the vehicles among the members.
 
 **Montgomery County Map**
 
@@ -39,8 +39,8 @@ The RPC has decided to include ML predictions of future call volumes in their re
 
 **Success Criteria**
 
-- Constraint: 50 police cruisers, 50 fire trucks, and 50 ambulances have been aquired and await distribution among the county's townships and boroughs.
-- Success: An ML Model suggest where to distribute the vehivles based on predicted call volumes.
+- Constraint: 150 police cruisers, 150 fire trucks, and 150 ambulances have been aquired and await distribution among the county's townships and boroughs.
+- Success: An ML Model suggest where to distribute the vehicles based on predicted call volumes.
 
 _NOTE: This objective definition has been contrived without the advice of a 911 SME._
 
