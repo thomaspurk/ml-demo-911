@@ -157,16 +157,37 @@ Results from Kaggle Notebook
 - Both the MAE (1.52) and RMSE (2.99) are a bit high percentage wise to STD (7.24) - a bit of a concern!
 - RMSE (2.99) is a bit larger than MAE (1.52), and RMSE penalizes indvidual large error due to squaring means there are a few outliers. Possibly due to the large difference in activity in rural vs urban townships. - makes sense!
 
-Conclusion: move foward with the Random Forest Regressor model
+Conclusion: move foward with the Random Forest Regressor model.
 
 ## Model Training, Evaluation, & Optimization
 
 Notebook [Model Training - MCPA 911](model-training/model-train-eval-opt-mcpa-911.ipynb)
 
-- Trained a Random Forrest Regressor model based on the model evaluation step
-- Used SciKit Learn's GridSearchCV to find optimized hyperparameters
+- Trained a Random Forrest Regressor model based on the model evaluation step.
+- Used SciKit Learn's GridSearchCV to find optimized hyperparameters.
 - The Grid Search paramters were artificially limited to allow the process to complete on the Kaggle compute environment.
+- In a real-world scenario, an adequate compute enviroment would support a more robust set of grid search parameters.
+
+**Grid Search - Model**
+
+![alt text](images/grid-search-cv.png)
+
+**Grid Search - Best Configuration**
 
 ![alt text](<images/best params.png>)
 
+**Final Metrics & Comparisons**
+
 ![alt text](images/optimized-rfr-metrics.png)
+
+## Analysis Example
+
+Notebook [Analysis Example - MCPA 911](analysis/analysis-example-mcpa-911.ipynb)
+
+- Used the best model discovered in the previous step to predict next year's call volume.
+- Additionally, assumed a 10% increase in calls over historic model.
+- Used SciPy's linprog function to allocate newly available vehicles to satisfy the most new predicted need.
+
+EMS Example Chart
+
+![alt text](images/ems-vehicle-allocation.png)
